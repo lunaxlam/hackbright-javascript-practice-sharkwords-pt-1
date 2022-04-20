@@ -18,9 +18,10 @@ const WORDS = [
 const numWrong = 0;
 
 
-// Loop over the chars in `word` and create divs.
-// The divs should be appended to the section with id="word-container".
 const createDivsForChars = (word) => {
+  // Loop over the chars in `word` and create divs.
+  // The divs should be appended to the section with id="word-container".
+
   for (const letter of word) {
 
     // Get the section of the DOM with the id="word-container"
@@ -33,9 +34,9 @@ const createDivsForChars = (word) => {
 };
 
 
-// Loop over each letter in the alphabet and generate a button for each letter
-// The buttons should be appended to the section with id="letter-buttons"
 const generateLetterButtons = () => {
+  // Loop over each letter in the alphabet and generate a button for each letter
+  // The buttons should be appended to the section with id="letter-buttons"
   
   for (const letter of ALPHABET) {
 
@@ -50,22 +51,21 @@ const generateLetterButtons = () => {
 };
 
 
-// Set the `disabled` property of `buttonEl` to `true.
-//
-// `buttonEl` is an `HTMLElement` object.
-//
 const disableLetterButton = (buttonEl) => {
+  // Set the `disabled` property of `buttonEl` to `true.
+  //
+  // `buttonEl` is an `HTMLElement` object.
+  //
 
   buttonEl.disabled = true;
 
 };
 
 
-// This is a helper function we will use in the future
-// It should return `true` if `letter` is in the word
-// For now, you should test it out to make sure it works
-
 const isLetterInWord = (letter, word) => {
+  // This is a helper function we will use in the future
+  // It should return `true` if `letter` is in the word
+  // For now, you should test it out to make sure it works
 
   const letterDiv = document.querySelector(`.${letter}`);
   
