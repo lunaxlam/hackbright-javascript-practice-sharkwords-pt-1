@@ -26,7 +26,7 @@ const createDivsForChars = (word) => {
     // Get the section of the DOM with the id="word-container"
     const container = document.querySelector('#word-container');
 
-    // Before the section ends, insert a div element with a letter-specific value for the letter-box class
+    // Before the section ends, insert a div element with a letter-specific value class AND a letter-box class (two separate classes)
     container.insertAdjacentHTML('beforeend', `<div class="letter-box ${letter}"></div>`);
 
   }
@@ -66,8 +66,11 @@ const disableLetterButton = (buttonEl) => {
 // For now, you should test it out to make sure it works
 
 const isLetterInWord = (letter, word) => {
+
+  const letterDiv = document.querySelector(`.${letter}`);
   
-  if (word.includes(letter)) {
+  // Returns a "truthy" value because if the querySelector could not find the letter, it would be 'null'
+  if (letterDiv) {
     return "true";
   }
 
